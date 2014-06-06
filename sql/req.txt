@@ -1,0 +1,1 @@
+$DB->get_records_sql('SELECT * FROM {taxonomy_term_data} AS d, {taxonomy_term} AS t, {course} AS c WHERE t.name LIKE ? AND t.id=d.term_id AND  d.component='course' AND c.id=d.instance_id , array $params=array($search), $limitfrom=0, $limitnum=10);
